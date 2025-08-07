@@ -17,17 +17,23 @@
     button {
       width: 100px;
       height: 40px;
-      background: rgb(230, 229, 229);
       border: none;
       border-radius: 8px;
-      color: #000000;
       font-size: 16px;
       font-weight: 500;
+      cursor: pointer;
+      transition: all 0.5s;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
 
-    button:hover {
-      background: rgb(127, 221, 127);
+    .isActive {
+      background-color: rgb(127, 208, 233);
       color: #ffffff;
+    }
+
+    .unActive {
+      background: rgb(230, 229, 229);
+      color: #000000;
     }
   }
 }
