@@ -1,15 +1,17 @@
-import { useState } from "react";
 import "./ControlPanel.scss";
 import { Locations } from "../../types/shops";
 
 interface ControlPanelProps {
   items: Locations;
+  currentLocation: string;
+  setCurrentLocation: (location: string) => void;
 }
 
-function ControlPanel({ items }: ControlPanelProps) {
-  const [currentLocation, setCurrentLocation] = useState("minsk");
-  console.log(currentLocation);
-
+function ControlPanel({
+  items,
+  currentLocation,
+  setCurrentLocation,
+}: ControlPanelProps) {
   return (
     <section className="section-panel">
       <div className="title-panel">

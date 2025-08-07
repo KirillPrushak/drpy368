@@ -1,27 +1,31 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer } from "react-leaflet";
 import "./Map.scss";
 import "leaflet/dist/leaflet.css";
 import { LatLngExpression } from "leaflet";
+import { Locations } from "../../types/shops";
+import { locations } from "../../data/locations";
+import Modal from "../Modal/Modal";
 
-function Map() {
-  const position: LatLngExpression = [51.505, -0.09];
+interface MapCoordinatorProps {
+  items: Locations;
+  currentLocation: string;
+}
+
+function Map({ items, currentLocation }: MapCoordinatorProps) {
+  const currentLocationData = locations[currentLocation];
+
   return (
-    <MapContainer
-      center={position}
-      zoom={10}
-      scrollWheelZoom={false}
-      className="map"
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <Marker position={position}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker>
-    </MapContainer>
+    <>
+      <MapContainer
+        center={currentLocationData.center}
+        zoom={11}
+        key={currentLocationData.name}
+        scrollWheelZoom={false}
+        className="map"
+      >
+        <Modal items={items} currentLocation={currentLocation} />
+      </MapContainer>
+    </>
   );
 }
 
