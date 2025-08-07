@@ -1,0 +1,33 @@
+.section-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  .title-panel {
+    font-weight: 700;
+    font-size: 30px;
+  }
+
+  .control-panel {
+    display: flex;
+    gap: 20px;
+
+    button {
+      width: 100px;
+      height: 40px;
+      background: rgb(230, 229, 229);
+      border: none;
+      border-radius: 8px;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    button:hover {
+      background: rgb(127, 221, 127);
+      color: #ffffff;
+    }
+  }
+}
