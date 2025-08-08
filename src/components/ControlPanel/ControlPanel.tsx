@@ -1,11 +1,5 @@
+import { ControlPanelProps } from "../../types/props/controlPanelProps";
 import "./ControlPanel.scss";
-import { Locations } from "../../types/shops";
-
-interface ControlPanelProps {
-  items: Locations;
-  currentLocation: string;
-  setCurrentLocation: (location: string) => void;
-}
 
 function ControlPanel({
   items,
@@ -15,18 +9,19 @@ function ControlPanel({
   return (
     <section className="section-panel">
       <div className="title-panel">
-        <h1>Магазины</h1>
+        <h1>Панель управления</h1>
       </div>
       <div className="control-panel">
         {Object.keys(items).map((key) => {
           const isActive = currentLocation === key;
+          const center = items[key].name;
           return (
             <button
               className={`${isActive ? "isActive" : "unActive"}`}
               key={key}
               onClick={() => setCurrentLocation(key)}
             >
-              {items[key].name}
+              {center}
             </button>
           );
         })}

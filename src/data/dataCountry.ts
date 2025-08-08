@@ -1,4 +1,6 @@
-export const dataCountry: any = {
+import { DataCountry } from "../types/dataCountry";
+
+export const dataCountry: DataCountry = {
   type: "FeatureCollection",
   features: [
     {
