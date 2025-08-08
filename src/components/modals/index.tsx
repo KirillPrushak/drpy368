@@ -1,9 +1,8 @@
 import { Marker, Popup } from "react-leaflet";
-import "./Modal.scss";
-import { ModalProps } from "../../types/props/modalProps";
-import { customIcon } from "../custom/CustomIcon";
+import { ModalProps } from "./type";
+import { customPin } from "../icons";
 
-function Modal({ items }: ModalProps) {
+function CoordinateModal({ items }: ModalProps) {
   return (
     <>
       {Object.keys(items).map((key) => {
@@ -11,7 +10,7 @@ function Modal({ items }: ModalProps) {
         const item = items[key];
 
         return (
-          <Marker key={key} position={pos} icon={customIcon}>
+          <Marker key={key} position={pos} icon={customPin}>
             <Popup>
               <p>{item.name}</p>
             </Popup>
@@ -22,4 +21,4 @@ function Modal({ items }: ModalProps) {
   );
 }
 
-export default Modal;
+export default CoordinateModal;

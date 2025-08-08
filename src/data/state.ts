@@ -1,6 +1,6 @@
-import { DataCountry } from "../types/dataCountry";
+import { Data } from "../types/state";
 
-export const dataCountry: DataCountry = {
+export const dataCountry: Data = {
   type: "FeatureCollection",
   features: [
     {

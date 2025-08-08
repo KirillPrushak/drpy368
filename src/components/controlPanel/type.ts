@@ -1,4 +1,4 @@
-import { Locations } from "../shops";
+import { Locations } from "../../types/shops";
 
 export interface ControlPanelProps {
   items: Locations;

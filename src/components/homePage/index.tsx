@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { locations } from "../../data/locations";
-import ControlPanel from "../ControlPanel/ControlPanel";
-import Map from "../map/Map";
-import "./HomePage.scss";
+import { shops } from "../../data/shops";
+import "./index.scss";
+
+import ControlPanel from "../controlPanel/index";
+import Map from "../map/index";
 
 function HomePage() {
-  const data = locations;
+  const data = shops;
   const [currentLocation, setCurrentLocation] = useState("minsk");
 
   return (

@@ -1,5 +1,5 @@
-import { ControlPanelProps } from "../../types/props/controlPanelProps";
-import "./ControlPanel.scss";
+import { ControlPanelProps } from "./type";
+import "./index.scss";
 
 function ControlPanel({
   items,

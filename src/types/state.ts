@@ -1,7 +1,7 @@
 type multiPolygons = number[][][];
 export type Position = [number, number];
 
-export interface DataCountry {
+export interface Data {
   type: string;
   features: Array<{
     geometry: {

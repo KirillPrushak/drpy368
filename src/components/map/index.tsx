@@ -1,15 +1,15 @@
 import { MapContainer, Polygon, TileLayer } from "react-leaflet";
-import "./Map.scss";
+import "./index.scss";
 import "leaflet/dist/leaflet.css";
-import { locations } from "../../data/locations";
-import Modal from "../Modal/Modal";
-import { dataCountry } from "../../data/dataCountry";
-import { CoordinatProps } from "../../types/props/coordinatProps";
-import { ColorOptions } from "../../types/props/colorOptions";
-import { Position } from "../../types/dataCountry";
+import { shops } from "../../data/shops";
+
+import { ColorOptions, CoordinatProps } from "./type";
+import { Position } from "../../types/state";
+import CoordinateModal from "../modals/index";
+import { dataCountry } from "../../data/state";
 
 function Map({ items, currentLocation }: CoordinatProps) {
-  const currentLocationData = locations[currentLocation];
+  const currentLocationData = shops[currentLocation];
   const colorOptions: ColorOptions = { color: "purple" };
 
   return (
@@ -67,7 +67,7 @@ function Map({ items, currentLocation }: CoordinatProps) {
                 }}
               />
             )}
-            <Modal items={items} />
+            <CoordinateModal items={items} />
           </>
         );
       })}
