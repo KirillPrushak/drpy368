@@ -8,9 +8,6 @@ function ControlPanel({
 }: ControlPanelProps) {
   return (
     <section className="section-panel">
-      <div className="title-panel">
-        <h1>Панель управления</h1>
-      </div>
       <div className="control-panel">
         {Object.keys(items).map((key) => {
           const isActive = currentLocation === key;

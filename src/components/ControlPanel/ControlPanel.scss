@@ -13,6 +13,7 @@
   .control-panel {
     display: flex;
     gap: 20px;
+    flex-direction: column;
 
     button {
       width: 100px;
