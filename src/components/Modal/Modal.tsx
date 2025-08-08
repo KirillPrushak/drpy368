@@ -8,14 +8,15 @@ function Modal({ items }: ModalProps) {
     <>
       {Object.keys(items).map((key) => {
         const pos = items[key].center;
-        <Marker key={key} position={pos} icon={customIcon}>
-          <Popup>
-            <div className="modal">
-              <h3>sdcsdvd</h3>
-              <p>Координаты: 1111</p>
-            </div>
-          </Popup>
-        </Marker>;
+        const item = items[key];
+
+        return (
+          <Marker key={key} position={pos} icon={customIcon}>
+            <Popup>
+              <p>{item.name}</p>
+            </Popup>
+          </Marker>
+        );
       })}
     </>
   );

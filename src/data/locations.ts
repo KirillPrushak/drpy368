@@ -3,7 +3,7 @@ import { Locations } from "../types/shops";
 export const locations: Locations = {
   minsk: {
     name: "Минск",
-    center: [53.54, 27.33],
+    center: [53.9, 27.56],
     // shops: [
     //   {
     //     id: 1,
@@ -24,7 +24,7 @@ export const locations: Locations = {
   },
   gomel: {
     name: "Гомель",
-    center: [52.26, 31.0],
+    center: [52.43, 30.98],
     // shops: [
     //   {
     //     id: 4,
@@ -35,7 +35,7 @@ export const locations: Locations = {
   },
   brest: {
     name: "Брест",
-    center: [52.5, 23.4],
+    center: [52.1, 23.69],
     // shops: [
     //   {
     //     id: 4,
@@ -46,7 +46,7 @@ export const locations: Locations = {
   },
   vitebsk: {
     name: "Витебск",
-    center: [55.11, 30.1],
+    center: [55.19, 30.2],
     // shops: [
     //   {
     //     id: 5,
@@ -62,7 +62,7 @@ export const locations: Locations = {
   },
   grodno: {
     name: "Гродно",
-    center: [53.4, 23.49],
+    center: [53.69, 23.83],
     // shops: [
     //   {
     //     id: 5,
@@ -78,7 +78,7 @@ export const locations: Locations = {
   },
   mogilev: {
     name: "Могилев",
-    center: [53.54, 30.2],
+    center: [53.92, 30.34],
     // shops: [
     //   {
     //     id: 5,
