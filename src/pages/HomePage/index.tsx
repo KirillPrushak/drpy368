@@ -6,7 +6,7 @@ import Map from "../../components/map";
 
 function HomePage() {
   const data = shops;
-  const [currentLocation, setCurrentLocation] = useState("minsk");
+  const [currentLocation, setCurrentLocation] = useState<string>("minsk");
 
   return (
     <section className="section-home">
