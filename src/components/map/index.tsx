@@ -1,4 +1,4 @@
-import { MapContainer, Polygon, TileLayer } from "react-leaflet";
+import { Circle, MapContainer, Polygon, Popup, TileLayer } from "react-leaflet";
 import "./index.scss";
 import "leaflet/dist/leaflet.css";
 import { shops } from "../../data/shops";
@@ -27,6 +27,16 @@ function Map({ items, currentLocation }: CoordinatProps) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
+
+      <Circle
+        center={currentLocationData.center}
+        radius={8000}
+        pathOptions={{ color: "red", fillColor: "#f03", fillOpacity: 0.5 }}
+      >
+        <Popup>Нарисовать круг</Popup>
+      </Circle>
+
+      <CoordinateModal items={items} />
 
       {dataCountry.features.map((data) => {
         const center = data.geometry.centerCoordinates;
@@ -69,7 +79,6 @@ function Map({ items, currentLocation }: CoordinatProps) {
                 }}
               />
             )}
-            <CoordinateModal items={items} />
           </>
         );
       })}
