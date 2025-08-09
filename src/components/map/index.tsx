@@ -3,14 +3,17 @@ import "./index.scss";
 import "leaflet/dist/leaflet.css";
 import { shops } from "../../data/shops";
 
-import { ColorOptions, CoordinatProps } from "./type";
+import { ColorOptions, CoordinatProps } from "./types";
 import { Position } from "../../types/state";
-import CoordinateModal from "../modals/index";
+
 import { dataCountry } from "../../data/state";
+import CoordinateModal from "../modals/coordinatesModal";
+
+const COLOR = "#696969";
 
 function Map({ items, currentLocation }: CoordinatProps) {
   const currentLocationData = shops[currentLocation];
-  const colorOptions: ColorOptions = { color: "purple" };
+  const colorOptions: ColorOptions = { color: COLOR };
 
   return (
     <MapContainer
@@ -41,7 +44,6 @@ function Map({ items, currentLocation }: CoordinatProps) {
                 eventHandlers={{
                   mouseover: (e) => {
                     const layer = e.target;
-                    console.log(layer);
                     layer.setStyle({
                       color: "#F88",
                     });
@@ -49,7 +51,7 @@ function Map({ items, currentLocation }: CoordinatProps) {
                   mouseout: (e) => {
                     const layer = e.target;
                     layer.setStyle({
-                      color: "#34dd50",
+                      color: COLOR,
                     });
                   },
                   click: (e) => {

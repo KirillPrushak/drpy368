@@ -1,4 +1,4 @@
-import { Locations } from "../../types/shops";
+import { Locations } from "../../../types/shops";
 
 export interface ModalProps {
   items: Locations;

@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { shops } from "../../data/shops";
 import "./index.scss";
-
-import ControlPanel from "../controlPanel/index";
-import Map from "../map/index";
+import ControlPanel from "../../components/controlPanel";
+import Map from "../../components/map";
 
 function HomePage() {
   const data = shops;
