@@ -1056,7 +1056,8 @@ export const dataCountry: Data = {
     {
       geometry: {
         type: "Polygon",
-        centerCoordinates: [27.512426255271063, 51.62309864252792],
+        // centerCoordinates: [27.512426255271063, 51.62309864252792],
+        centerCoordinates: [27.27139000420387, 52.3607318998845],
         coordinates: [
           [
             [27.27139000420387, 52.3607318998845],
@@ -1866,7 +1867,7 @@ export const dataCountry: Data = {
     {
       geometry: {
         type: "Polygon",
-        centerCoordinates: [27.512426255271063, 51.62309864252792],
+        centerCoordinates: [31.179016939438448, 54.45335266422746],
         coordinates: [
           [
             [31.179016939438448, 54.45335266422746],
@@ -2749,7 +2750,7 @@ export const dataCountry: Data = {
     {
       geometry: {
         type: "Polygon",
-        centerCoordinates: [27.512426255271063, 51.62309864252792],
+        centerCoordinates: [26.37650925641008, 53.36454674235754],
         coordinates: [
           [
             [26.37650925641008, 53.36454674235754],
@@ -3549,7 +3550,7 @@ export const dataCountry: Data = {
     {
       geometry: {
         type: "Polygon",
-        centerCoordinates: [27.512426255271063, 51.62309864252792],
+        centerCoordinates: [31.36157329949241, 53.120037559030436],
         coordinates: [
           [
             [31.36157329949241, 53.120037559030436],
@@ -4683,7 +4684,7 @@ export const dataCountry: Data = {
     {
       geometry: {
         type: "Polygon",
-        centerCoordinates: [27.512426255271063, 51.62309864252792],
+        centerCoordinates: [28.469198049815535, 52.68011819150245],
         coordinates: [
           [
             [28.469198049815535, 52.68011819150245],
@@ -6030,7 +6031,7 @@ export const dataCountry: Data = {
     {
       geometry: {
         type: "Polygon",
-        centerCoordinates: [27.512426255271063, 51.62309864252792],
+        centerCoordinates: [27.760759694327632, 53.80424853537469],
         coordinates: [
           [
             [27.760759694327632, 53.80424853537469],
