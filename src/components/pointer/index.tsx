@@ -1,6 +1,7 @@
 import { Marker, Popup } from "react-leaflet";
-import { ModalProps } from "./type";
+
 import Leaflet from "leaflet";
+import { PointerProps } from "./type";
 
 const customPin = new Leaflet.Icon({
   iconUrl: "https://img.icons8.com/?size=100&id=15989&format=png&color=000000",
@@ -9,7 +10,7 @@ const customPin = new Leaflet.Icon({
   popupAnchor: [0, -32],
 });
 
-function CoordinateModal({ items }: ModalProps) {
+function CoordinateModal({ items }: PointerProps) {
   return (
     <>
       {Object.keys(items).map((key) => {

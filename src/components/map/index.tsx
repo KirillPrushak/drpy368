@@ -7,7 +7,7 @@ import { ColorOptions, CoordinatProps } from "./types";
 import { Position } from "../../types/state";
 
 import { dataCountry } from "../../data/state";
-import CoordinateModal from "../modals/coordinatesModal";
+import CoordinateModal from "../pointer";
 
 const COLOR = "#696969";
 
@@ -69,8 +69,10 @@ function Map({ items, currentLocation }: CoordinatProps) {
                     layer
                       .bindPopup(
                         `<div>
+                        <h3>Координаты:
+                        ${center[1].toFixed(2).replace(".", "°")}′,
+                          ${center[0].toFixed(2).replace(".", "°")}′</h3>
                       <p>${data.properties.description}</p>
-                      <p><span>Координаты</span>: ${center}</p>
                       <p>Население: ${data.properties.population}</p>
                       </div>`
                       )
