@@ -45,43 +45,41 @@ function Map({ items, currentLocation }: CoordinatProps) {
         );
 
         return (
-          <>
-            {center && (
-              <Polygon
-                key={data.id}
-                pathOptions={colorOptions}
-                positions={positions}
-                eventHandlers={{
-                  mouseover: (e) => {
-                    const layer = e.target;
-                    layer.setStyle({
-                      color: "#F88",
-                    });
-                  },
-                  mouseout: (e) => {
-                    const layer = e.target;
-                    layer.setStyle({
-                      color: COLOR,
-                    });
-                  },
-                  click: (e) => {
-                    const layer = e.target;
-                    layer
-                      .bindPopup(
-                        `<div>
+          center && (
+            <Polygon
+              key={data.id}
+              pathOptions={colorOptions}
+              positions={positions}
+              eventHandlers={{
+                mouseover: (e) => {
+                  const layer = e.target;
+                  layer.setStyle({
+                    color: "#F88",
+                  });
+                },
+                mouseout: (e) => {
+                  const layer = e.target;
+                  layer.setStyle({
+                    color: COLOR,
+                  });
+                },
+                click: (e) => {
+                  const layer = e.target;
+                  layer
+                    .bindPopup(
+                      `<div>
                         <h3>Координаты:
                         ${center[1].toFixed(2).replace(".", "°")}′,
                           ${center[0].toFixed(2).replace(".", "°")}′</h3>
                       <p>${data.properties.description}</p>
                       <p>Население: ${data.properties.population}</p>
                       </div>`
-                      )
-                      .openPopup();
-                  },
-                }}
-              />
-            )}
-          </>
+                    )
+                    .openPopup();
+                },
+              }}
+            />
+          )
         );
       })}
     </MapContainer>
